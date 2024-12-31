@@ -51,7 +51,7 @@ def main():
     """Main function to run the game with Tkinter UI."""
     board = [[' ' for _ in range(3)] for _ in range(3)]
     players = ['X', 'O']
-    turn = [0]  # Use a list to allow modification within nested functions
+    turn = [0]  
 
     def handle_click(row, col):
         if board[row][col] == ' ':
@@ -65,7 +65,7 @@ def main():
                 messagebox.showinfo("Game Over", f"It's a tie! Well played both players!\n{random_fun_fact()}")
                 root.quit()
             else:
-                turn[0] = 1 - turn[0]  # Switch turns
+                turn[0] = 1 - turn[0] 
         else:
             messagebox.showwarning("Invalid Move", "This square is already taken!")
 
